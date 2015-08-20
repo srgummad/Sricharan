@@ -5,11 +5,11 @@ body{
 a{
     text-decoration:none;
     color: #00A5CC;
-    text-size:3em;
+    text-size:2em;
 }
 header {
     width:100%;
-    height: 3em;
+    height: 4em;
     margin:auto;
     border-bottom: 0.2em solid #EEE;    
 }
@@ -26,7 +26,7 @@ nav{
 }
 nav ul
 {
-    line-height:2.5em; /*--this changes the position of text (up or down)--*/
+    line-height:1em; /*--this changes the position of text (up or down)--*/
 }
 nav li
 {
@@ -46,6 +46,30 @@ nav  a:hover
 /*---------Navigation menu styles-----------*/
 .menu{
     width:100%;
-    height: 2.5em; /*--change in this height changes the menu height--*/
+    height: 3em; /*--change in this height changes the menu height--*/
     background: #DCCDAB;
+    position: absolute;
+    top:-4.1em;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    
+}
+.menu-icon{
+    float:right;
+    padding: .35em 0.75em;
+    background:#E5DAC0;
+    color:#C3AA6F;
+    cursor:pointer;
+    border-radius: 0.5em;
+    margin: 0.75em 0.75em 0 0;
+}
+#menuToggle{
+    display:none;
+}
+#menuToggle:checked ~ .menu{
+    position:absolute;
+    top:4.1em;
 }
