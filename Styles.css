@@ -11,7 +11,9 @@ header {
     width:100%;
     height: 4em;
     margin:auto;
-    border-bottom: 0.2em solid #EEE;    
+    border-bottom: 0.2em solid #EEE;   
+    background : #FFF;
+    z-index:99;    
 }
 #header {
     float:left;
@@ -55,6 +57,7 @@ nav  a:hover
     -moz-transition: all .3s ease-in-out;
     -ms-transition: all .3s ease-in-out;
     -o-transition: all .3s ease-in-out;
+    z-index:-1;
     
 }
 .menu-icon{
@@ -72,4 +75,22 @@ nav  a:hover
 #menuToggle:checked ~ .menu{
     position:absolute;
     top:4.1em;
+}
+/*---------Media query-----------*/
+@media screen and (max-width: 580px){
+    nav li{
+        display:block;
+        }
+    nav a{
+        display:inline-block;    
+        }
+    nav a:hover{
+        border-radius:0.75em;
+        
+    }
+    .menu{
+        top:-13em;
+        height:auto;
+        
+    }
 }
